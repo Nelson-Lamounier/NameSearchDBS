@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34202.233
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NameSearch", "NameSearch\NameSearch.csproj", "{5B824B8F-847D-4C96-AA9A-99D2B7C3D082}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{64B66D08-7415-41DA-9B78-24D18E1BFC87}"
+	ProjectSection(SolutionItems) = preProject
+		NameSearch\bin\Debug\BoyNames.txt = NameSearch\bin\Debug\BoyNames.txt
+		NameSearch\bin\Debug\GirlNames.txt = NameSearch\bin\Debug\GirlNames.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5B824B8F-847D-4C96-AA9A-99D2B7C3D082}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B824B8F-847D-4C96-AA9A-99D2B7C3D082}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B824B8F-847D-4C96-AA9A-99D2B7C3D082}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B824B8F-847D-4C96-AA9A-99D2B7C3D082}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8071D146-1108-4F69-9A30-9F9DB1806C80}
+	EndGlobalSection
+EndGlobal
