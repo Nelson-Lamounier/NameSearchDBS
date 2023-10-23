@@ -1,4 +1,5 @@
-﻿// Application that reads the contents of the 2 files into 2 separate Arrays or Lists.
+﻿// Nelson Lamounier Leao - 10351682
+// Application that reads the contents of the 2 files into 2 separate Arrays or Lists.
 //The user should be able to enter a Boy's name, a Girl's name or both and
 //the application should display messages indicating whether the names were among the most popular. 
 
