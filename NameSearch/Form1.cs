@@ -1,4 +1,10 @@
-﻿using System;
+﻿// Application that reads the contents of the 2 files into 2 separate Arrays or Lists.
+//The user should be able to enter a Boy's name, a Girl's name or both and
+//the application should display messages indicating whether the names were among the most popular. 
+
+// File needed is placed on /bin/debug folder
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -29,13 +35,13 @@ namespace NameSearch
             // Variable to hold user's input
             string searchForBoyName = textBoxBoy.Text;
             string searchForGirlName = textBoxGirl.Text;
-            int counter = 0;
-            string message = "";
-            bool found = false;
+            int counter = 0; // To track the position of the name against the txt file initialized to 0
+            string message = ""; // String message as user will be able to serach only boys names and vice verse
+            bool found = false; // If name is found, change boolean to true
 
             try
             {
-                // Create arrays for boy's name and a list for girl's name
+                // Create arrays for boy's name and a list for girl's name - Boy's will be read into a string - Girl's populate a list
                 string[] boyNames = File.ReadAllLines("C:BoyNames.txt");
                 List<string> girlNames = new List<string>();
 
@@ -49,9 +55,9 @@ namespace NameSearch
                         break;
                     }
 
-                    counter++;
+                    counter++; // If name not found, increase the counter for the next iteration of the loop
                 }
-
+                // Statment if name not found
                 if (!found && searchForBoyName != "")
                     message += searchForBoyName + " was NOT found in boys names!\n";
 
@@ -61,14 +67,14 @@ namespace NameSearch
                 while (!sr.EndOfStream)
                 {
                     line = sr.ReadLine();
-                    girlNames.Add(line);
+                    girlNames.Add(line); // Populate list of names
                 }
 
+                // Second argument to Validate upper and lower case input
                 if (girlNames.Contains(searchForGirlName, StringComparer.OrdinalIgnoreCase))
                 {
-                    // Validate upper and lower case input
-                    string name = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(searchForGirlName);
-                    counter = girlNames.IndexOf(name);
+                    // Make it a first letter uppercase case
+                    string name = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(searchForGirlName);                    counter = girlNames.IndexOf(name);
                     message += searchForGirlName + " was the #" + (counter + 1) + "Girl's name\n";
                    
                 }
